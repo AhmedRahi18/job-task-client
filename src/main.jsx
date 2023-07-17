@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       {
         path: 'university/:name',
         element:<Scholarships></Scholarships>,
-        loader:({params})=>fetch(`http://localhost:5000/university/${params.name}`)
+        loader:({params})=>fetch(`https://job-task-server-topaz.vercel.app/university/${params.name}`)
       },
       {
         path: 'universities',
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       {
         path: 'course/:name',
         element: <Course></Course>,
-        loader: ({params})=>fetch(`http://localhost:5000/course/${params.name}`)
+        loader: ({params})=>fetch(`https://job-task-server-topaz.vercel.app/course/${params.name}`)
       }
     ]
     

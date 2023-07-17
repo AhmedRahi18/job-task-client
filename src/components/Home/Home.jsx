@@ -19,7 +19,7 @@ const Home = () => {
   const [filteredCourses, setFilteredCourses] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/university")
+    fetch("https://job-task-server-topaz.vercel.app/university")
       .then((res) => res.json())
       .then((data) => setUniversities(data));
   }, []);
@@ -33,7 +33,7 @@ const Home = () => {
   }, [search, courses]);
 
   const handleSearch = () => {
-    fetch(`http://localhost:5000/universitySearch/${search}`)
+    fetch(`https://job-task-server-topaz.vercel.app/universitySearch/${search}`)
       .then((res) => res.json())
       .then((data) => {
         setAllUni(data);
@@ -56,7 +56,7 @@ const Home = () => {
 
   const handleShow = () => {
     setShow(!show);
-    fetch(`http://localhost:5000/course`)
+    fetch(`https://job-task-server-topaz.vercel.app/course`)
       .then((res) => res.json())
       .then((data) => {
         setCourses(data);
